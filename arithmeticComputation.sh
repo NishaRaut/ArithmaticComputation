@@ -25,7 +25,9 @@ then
                   do
                      array[((count++))]=$i
                   done 
-						echo ${array[*]}| tr " " "\n" | sort -n  
+						echo ${array[*]}| tr " " "\n" | sort -n
+						echo ${array[*]}| tr " " "\n" | sort -r -n 
+  
 				else
 						echo "Sorry integers only.."
 				fi
