@@ -21,6 +21,10 @@ then
 						arithmeticResults[a%b+c]="$operation4"
 						echo ${arithmeticResults[@]}
 
+						for i in ${arithmeticResults[@]}
+                  do
+                     array[((count++))]=$i
+                  done  
 				else
 						echo "Sorry integers only.."
 				fi
