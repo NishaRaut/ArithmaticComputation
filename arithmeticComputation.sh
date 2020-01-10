@@ -9,8 +9,18 @@ then
 				read -p "Enter third number: " c
 				if [ -z "${c//[0-9]}" ] && [ -n "$c" ]
 				then
-						result=$((($a%$b)+c ))
-						echo "$a%$b+$c = $result"
+						operation1=$(($a+$b*$c))
+						operation2=$(($a*$b+$c))
+						operation3=$(($c+($a/$b)))
+						operation4=$((($a%$b)+$c))
+						declare -A arithmeticResults
+						echo "a=$a, b=$b, c=$c"
+						arithmeticResults[a+b*c]="$operation1"
+						arithmeticResults[a*b+c]="$operation2"
+						arithmeticResults[c+a/b]="$operation3"
+						arithmeticResults[a%b+c]="$operation4"
+						echo ${arithmeticResults[@]}
+
 				else
 						echo "Sorry integers only.."
 				fi
