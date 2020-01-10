@@ -24,7 +24,8 @@ then
 						for i in ${arithmeticResults[@]}
                   do
                      array[((count++))]=$i
-                  done  
+                  done 
+						echo ${array[*]}| tr " " "\n" | sort -n  
 				else
 						echo "Sorry integers only.."
 				fi
