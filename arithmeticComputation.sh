@@ -9,8 +9,8 @@ then
 				read -p "Enter third number: " c
 				if [ -z "${c//[0-9]}" ] && [ -n "$c" ]
 				then
-						result=$(($a*$b+$c))
-						echo "$a*$b+$c = $result"
+						result=$(($c+($a/$b) ))
+						echo "$c+$a/$b = $result"
 				else
 						echo "Sorry integers only.."
 				fi
